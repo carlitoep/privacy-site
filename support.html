@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support – Get2Gether</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 40px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    img.logo {
+      max-width: 150px;
+      display: block;
+      margin: 0 auto 30px auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      text-align: center;
+      color: #555;
+    }
+
+    form {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 14px;
+      font-size: 16px;
+      background-color: #0066ff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #004fcc;
+    }
+
+    .note {
+      font-size: 14px;
+      color: #777;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="/logo.png" alt="Get2Gether Logo" class="logo">
+
+    <h1>Support & Hilfe</h1>
+    <p>Du hast Fragen, Probleme oder Feedback? Schreibe uns und wir melden uns so schnell wie möglich.</p>
+
+    <form action="mailto:support@joinget2gether.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Dein Name" required>
+      <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
+      <input type="text" name="subject" placeholder="Betreff" required>
+      <textarea name="message" rows="6" placeholder="Deine Nachricht" required></textarea>
+      <button type="submit">Nachricht senden</button>
+    </form>
+
+    <p class="note">Alternativ kannst du uns auch direkt eine E-Mail schreiben an <a href="mailto:support@joinget2gether.com">support@joinget2gether.com</a>.</p>
+  </div>
+
+</body>
+</html>
