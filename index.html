@@ -16,35 +16,61 @@
     body {
       background: linear-gradient(135deg, #4a90e2, #50e3c2);
       color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: rgba(0,0,0,0.2);
+      flex-wrap: wrap;
+    }
+
+    header img.logo {
+      width: 150px;
+      height: auto;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    main {
+      flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
       text-align: center;
-      padding: 20px;
+      padding: 40px 20px;
     }
 
-    header {
-      margin-bottom: 40px;
-    }
-
-    header img {
-      width: 150px;
-      height: auto;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+    main h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
       font-weight: bold;
     }
 
-    p {
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin: 0 auto 30px auto;
+    main p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin-bottom: 40px;
       line-height: 1.5;
     }
 
@@ -55,34 +81,36 @@
       flex-wrap: wrap;
     }
 
-    .store-buttons a {
-      display: inline-block;
-      text-decoration: none;
-    }
-
-    .store-buttons img {
+    .store-buttons a img {
       height: 60px;
       transition: transform 0.2s;
     }
 
-    .store-buttons img:hover {
+    .store-buttons a img:hover {
       transform: scale(1.05);
     }
 
     footer {
-      margin-top: 50px;
+      text-align: center;
       font-size: 0.9rem;
       opacity: 0.8;
+      padding: 20px;
     }
 
-    @media (max-width: 500px) {
-      h1 {
-        font-size: 2rem;
+    /* Mobile Menü */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
       }
-      p {
+      main h1 {
+        font-size: 2.2rem;
+      }
+      main p {
         font-size: 1rem;
       }
-      .store-buttons img {
+      .store-buttons a img {
         height: 50px;
       }
     }
@@ -90,21 +118,27 @@
 </head>
 <body>
   <header>
-    <!-- Logo hier einfügen -->
-    <img src="G2G_transparent.png" alt="JoinGet2Gether Logo">
-    <h1>JoinGet2Gether</h1>
-    <p>Die App, die Menschen zusammenbringt. Finde Events, chatte direkt mit Freunden mit den selben Interessen und erlebe unvergessliche Momente!</p>
+    <img src="G2G_transparent.png" alt="JoinGet2Gether Logo" class="logo">
+    <nav>
+      <a href="/impressum.html">Impressum</a>
+      <a href="/privacy-policy.html">Datenschutzerklärung</a>
+      <a href="/support.html">Support</a>
+    </nav>
   </header>
 
-  <section class="store-buttons">
-    <!-- Hier deine App Store Links -->
-    <a href="https://apps.apple.com/de/app/idDEINE_APPLE_ID" target="_blank">
-      <img src="appstore-badge.png" alt="Download im App Store">
-    </a>
-    <a href="https://play.google.com/store/apps/details?id=DEINE_PLAYSTORE_ID" target="_blank">
-      <img src="playstore-badge.png" alt="Download bei Google Play">
-    </a>
-  </section>
+  <main>
+    <h1>JoinGet2Gether</h1>
+    <p>Die App, die Menschen zusammenbringt. Finde Events, chatte direkt mit Freunden mit denselben Interessen und erlebe unvergessliche Momente!</p>
+
+    <section class="store-buttons">
+      <a href="https://apps.apple.com/de/app/idDEINE_APPLE_ID" target="_blank">
+        <img src="appstore-badge.png" alt="Download im App Store">
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=DEINE_PLAYSTORE_ID" target="_blank">
+        <img src="playstore-badge.png" alt="Download bei Google Play">
+      </a>
+    </section>
+  </main>
 
   <footer>
     &copy; 2026 JoinGet2Gether. Alle Rechte vorbehalten.
